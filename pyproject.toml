@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prismatic-hub"
+version = "0.1.0"
+description = "Prismatic Agent Hub — Portable agent orchestration dashboard and core engine"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "AGPL-3.0-only"}
+keywords = ["agent", "orchestration", "dashboard", "prism", "swarms"]
+
+authors = [
+    {name = "Michael Gulden", email = "mbgulden@gmail.com"},
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/mbgulden/prismatic-hub"
+Documentation = "https://github.com/mbgulden/prismatic-hub"
+
+[tool.setuptools.packages.find]
+include = ["prismatic*"]
+
+[tool.setuptools.package-data]
+prismatic = ["web/**/*"]
